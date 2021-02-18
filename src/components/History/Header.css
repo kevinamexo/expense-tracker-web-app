@@ -1,0 +1,20 @@
+.transaction-history-header{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 65px;
+    width: 100%;
+    /* box-shadow: 0 0 2px 1px rgb(201, 200, 200); */
+    border-bottom:1px solid rgb(201, 200, 200);
+}
+
+.header-calendar{
+    font-size: 1.5em;
+    margin-right: 5px;
+    color:rgb(0, 0, 0);
+}
+
+.transaction-history-header p{
+    font-size: 1em;
+    color:rgb(0, 0, 0)
+}

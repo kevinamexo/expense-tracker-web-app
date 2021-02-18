@@ -1,0 +1,44 @@
+.navbar{
+    padding: 0 70px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow: 0 0 2px 1px rgb(201, 200, 200);
+}
+
+.logo-section,
+.user-section{
+    display: flex;
+    align-items: center;
+}
+
+.logo-section,
+.open-menu-btn{
+    /* background-color: aqua; */
+    cursor: pointer;
+}
+.logo{
+    font-size: 1.5em;
+}
+.logo-name{
+    margin-left:10px;
+}
+
+.user-icon{
+    margin-right: 10px;
+}
+.nav-sign-in{
+    margin-right: 40px;
+}
+.user-icon{
+    font-size: 1.5em;
+}
+
+.logo,
+.logo-name,
+.user-icon,
+.nav-sign-in{
+    color:rgb(19, 19, 19);
+    font-weight: bold;
+}

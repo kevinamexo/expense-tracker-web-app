@@ -1,0 +1,89 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.add-transaction{
+    height: 200px;
+    width: 80.2%;
+    display: flex;
+    flex-direction: column;
+    margin:38px 0 0 15px;
+}
+.hidden{
+    display: none;
+}
+
+.add-transaction-form{
+    display: flex;
+    justify-content: flex-end;
+    height: 30%;
+    width:100%;
+    grid-template-columns: 60% 40%;
+    /* box-shadow: 0 0 2px 1px rgb(201, 200, 200); */
+    /* border:1px solid rgb(201, 200, 200); */
+    /* border-top: none; */
+    flex-direction: column;  
+    /* display: none; */
+
+  
+    
+}
+
+.add-transaction-form input{
+    border-radius:0px !important;
+    /* display: none; */
+    box-shadow: 0 0 2px 1px rgb(201, 200, 200); 
+    margin-top: 5px;
+    outline: none;
+    border: none;
+}
+
+.transaction-type{
+    margin-top: 10px;
+}
+
+.add-button{
+    background-color: rgb(50, 134, 243);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border:none;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 5px;
+    
+}
+.confirm-button{
+    background-color: rgb(50, 243, 147);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border:none;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 5px;
+    
+}
+.add-button a{
+    color:#fff;
+    font-size: 0.9rem;
+}
+.add-icon{
+    color: white;
+    font-size: 1.5em;
+
+}

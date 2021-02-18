@@ -1,0 +1,12 @@
+.main-section-container{
+  display: grid;
+  grid-template-columns: 30% 40%;
+  background-color:rgb(245, 245, 245) ;
+  box-shadow: 0 0 2px 1px rgb(201, 200, 200);
+}
+
+.main-history-section{
+  /* width: 40vw; */
+  
+}
+
