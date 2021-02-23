@@ -1,6 +1,11 @@
 import React ,{useContext, useReducer, useState}from 'react'
 import AppReducer from './TransactionReducers'
 
+const add_amounts = (obj)=>{
+    obj.reduce(function(prev, cur){
+        return prev +cur.amount
+    }, 0)
+}
 export const TransactionContext= React.createContext()
 
 export function useTransactionContext(){
@@ -41,14 +46,43 @@ export function TransacProvider({children}){
         return prev+cur.amount
     },0)
     
+    
 
     // const transaction_type = state.transactions.map(transaction=>  {transaction.type, transaction.amount})
-    const food= state.transactions.filter((transaction)=> transaction.type==='food')
+    const food= state.transactions.filter(transaction=> transaction.type =='food')
+    const bills= state.transactions.filter(transaction=> transaction.type =='bills')
+    const entertainment= state.transactions.filter(transaction=> transaction.type =='entertainment')
 
+    const food_amount= food.map(f=> f.amount).reduce(function(a, b){
+        return a + b;
+    }, 0)
+    const bills_amount= bills.map(f=> f.amount).reduce(function(a, b){
+        return a + b;
+    }, 0)
+
+    const entertainment_amount= entertainment.map(f=> f.amount).reduce(function(a, b){
+        return a + b;
+    }, 0)
+
+    const income_transacs= state.transactions.filter(transaction => transaction.transactionType =='income')
+    const expenses= state.transactions.filter(transaction => transaction.transactionType =='expense')
+
+    const income_sum = income_transacs.map(i=>i.amount).reduce(function(a,b) {
+        return a+b
+        
+    },0)
+
+    const expense_sum = expenses.map(i=>i.amount).reduce(function(a,b) {
+        return a+b
+        
+    },0)
+
+    
+    
     const amounts = state.transactions.map(transaction=> transaction.amount)
-    console.log(amounts)
-    const income= amounts.filter(acc=> acc  >0 ).reduce((acc, item)=> (acc+=item),0)
-    const expenses= amounts.filter(acc=> acc <0).reduce((acc, item)=>(acc+=item), 0)*-1
+    
+    // const income= amounts.filter(acc=> acc  >0 ).reduce((acc, item)=> (acc+=item),0)
+    // const expenses= amounts.filter(acc=> acc <0).reduce((acc, item)=>(acc+=item), 0)*-1
 
     return (<TransactionContext.Provider value={
         {transactions:state.transactions,
@@ -57,9 +91,11 @@ export function TransacProvider({children}){
         clickAdd,
         handleClickAdd,
         balance,
-        income,
-        expenses,
-        food
+        income_sum,
+        expense_sum,
+        food: food? food_amount:0, 
+        entertainment:entertainment? entertainment_amount:0,
+        bills:bills? bills_amount:0
 
         
     }

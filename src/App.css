@@ -10,3 +10,7 @@
   
 }
 
+.summary{
+  grid-template-rows: 40% ;
+  width: 50vw;
+}

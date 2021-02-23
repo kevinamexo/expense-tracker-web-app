@@ -1,10 +1,9 @@
 import React from 'react'
 
-const transactionList=[
-    {
+
+const transactionList=[    {
         text:'Burger King',
-        id:1,
-        amount: '2000'
+        id:1,amount: '2000'
     },
     {
         text:'McDonalds',

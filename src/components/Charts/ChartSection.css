@@ -1,0 +1,20 @@
+.charts-section{
+    background-color: #fff;
+    height: 280px;
+    margin-top: 70px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+
+
+.pie-chart,
+.pie-chart canvas,
+.income-expense-pie,
+.income-expense-pie canvas{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}

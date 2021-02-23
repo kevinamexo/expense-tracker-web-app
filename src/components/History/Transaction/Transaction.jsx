@@ -5,6 +5,8 @@ import {IoFastFoodOutline} from 'react-icons/io5'
 import {RiMovie2Line} from 'react-icons/ri'
 import {BiReceipt} from 'react-icons/bi'
 import {MdRestaurant} from 'react-icons/md'
+import  {GrMoney} from 'react-icons/gr'
+import {FcCancel} from 'react-icons/fc'
 import './Transaction.css'
 
 const Transaction = ({transac}) => {
@@ -38,15 +40,18 @@ const Transaction = ({transac}) => {
     return (
         <div className="transaction">
             <div className="transaction-icon">
-                {transac.type ==='food'&& <MdRestaurant/>}
-                {transac.type == 'entertainment'&& <RiMovie2Line/>}
-                {transac.type == 'bills' && <BiReceipt/>}
+                {transac.type =='food'&& <MdRestaurant className="t-icon"/>}
+                {transac.type == 'entertainment'&& <RiMovie2Line  className="t-icon"/>}
+                {transac.type == 'bills' && <BiReceipt  className="t-icon"/>}
+                {transac.transactionType=='income'&&<GrMoney  className="t-icon"/> }
+                <p className="date">{`${transac.date.getDate()}-${transac.date.getMonth() + 1}-${transac.date.getFullYear()}`}</p>
+  
+                
             </div>
             <div className="transaction-name">
                 <p className="name">{transac.text}</p>
-                <p className="date">30th Dec, 2020 Monday</p>
             </div>
-            <div className="transaction-amount red">
+            <div className={transac.transactionType=='expense'?"transaction-amount red": "transaction-amount green"}>
                 <h3>${transac.amount}</h3>
             </div>
             <div className="edit-div">

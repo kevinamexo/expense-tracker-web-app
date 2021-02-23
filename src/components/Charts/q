@@ -1,0 +1,13 @@
+function DoughnutChart({data}) {
+    
+
+    return (
+        <div className="pie-chart">
+            <Doughnut data={data}/>
+        
+            
+        </div>
+    )
+}
+
+export default DoughnChart

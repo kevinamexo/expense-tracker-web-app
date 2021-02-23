@@ -9,7 +9,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 .add-transaction{
-    height: 200px;
+    height: 400px;
     width: 80.2%;
     display: flex;
     flex-direction: column;
@@ -44,10 +44,31 @@ input[type=number] {
     border: none;
 }
 
-.transaction-type{
+.transaction-type,
+.income-expense,
+.select-date-section{
     margin-top: 10px;
 }
+.form-select-fields{
+    display: flex;
+}
+.select-date{
+    font-size: 1em;
+    padding: 2px;
+    width: 80%;
+    margin-left: 10px;
+    
+}
 
+.select-date-section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.select-date-section p{
+    width: 10%;
+}
 .add-button{
     background-color: rgb(50, 134, 243);
     padding: 5px;
@@ -64,7 +85,7 @@ input[type=number] {
     
 }
 .confirm-button{
-    background-color: rgb(50, 243, 147);
+    background-color: rgb(35, 186, 110);
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -76,6 +97,9 @@ input[type=number] {
     height: 30px;
     border-radius: 10px;
     margin-top: 5px;
+    color: #fff;
+    text-shadow: black;
+    font-size: 1em;
     
 }
 .add-button a{

@@ -4,7 +4,7 @@ import History from './components/History/History'
 import {TransacProvider} from './Context/TransactionContext'
 import AddTransaction from './components/History/Transaction/AddTransaction/AddTransaction'
 import Summary from './components/Summary/Summary'
-
+import ChartSection from './components/Charts/ChartSection'
 function App() {
   return (
     <TransacProvider>
@@ -15,7 +15,12 @@ function App() {
             <History/>
             <AddTransaction/>
           </div>   
-          <Summary/>
+          <div className ="summary">
+            <Summary/>
+          </div>
+        {/* <LandingPage/> */}
+          
+         
         </div>
 
         
