@@ -7,7 +7,7 @@ import './ChartSection.css'
 function ChartSection() {
 
     const {entertainment, bills,food, income_sum, expense_sum}= useContext(TransactionContext)
-    const data= {
+    const expenseTypeData= {
         datasets:[{
             label: '% split of expenses',
             data:[entertainment,bills, food],
@@ -34,14 +34,33 @@ function ChartSection() {
 
 
     }
+
+    const income_expense_data={
+
+        datasets:[{
+            label: '% split of income and expensee',
+            data:[income_sum,expense_sum],
+            backgroundColor: [
+                'rgb(242, 86, 86)',
+                'rgb(242, 214, 103)'
+            ],
+            hoverBackgroundColor: [
+                'rgb(240, 0, 0)',
+                'rgb(240, 192, 0)'
+            ],
+        }],
+        labels:['Income', 'Expenses']
+
+        }
+    
     return (
         <div className="charts-section">
             <div className="expense-doughnut">
-                <DoughnutChart data={data} />
+                <DoughnutChart aspectRatio={1} data={expenseTypeData}  height ={'100%'} width={'90%'} options={{ maintainAspectRatio: false }}/>
             
             </div>
             <div className="income-expense-pie">
-                <PieChart data={data}/>
+                <PieChart data={income_expense_data}/>
             </div>
             
          

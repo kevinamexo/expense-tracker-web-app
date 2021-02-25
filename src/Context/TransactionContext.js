@@ -22,7 +22,7 @@ export function TransacProvider({children}){
 
     const [state, dispatch]= useReducer(AppReducer,initialState)
     const [clickAdd, setClickAdd] = useState(false)
-
+    const [openSidebar,setOpenSidebar]= useState(false)
 
     const handleClickAdd =()=>{
         setClickAdd(!clickAdd)
@@ -95,7 +95,9 @@ export function TransacProvider({children}){
         expense_sum,
         food: food? food_amount:0, 
         entertainment:entertainment? entertainment_amount:0,
-        bills:bills? bills_amount:0
+        bills:bills? bills_amount:0,
+        openSidebar,
+        setOpenSidebar
 
         
     }

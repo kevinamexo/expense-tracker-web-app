@@ -1,8 +1,14 @@
+.app{
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
+}
 .main-section-container{
   display: grid;
   grid-template-columns: 30% 40%;
-  background-color:rgb(245, 245, 245) ;
+  background-color:rgb(217, 227, 237) ;
   box-shadow: 0 0 2px 1px rgb(201, 200, 200);
+  padding-top:50px;
 }
 
 .main-history-section{

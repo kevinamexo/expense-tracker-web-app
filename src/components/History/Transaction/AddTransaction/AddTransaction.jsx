@@ -12,7 +12,7 @@ function AddTransaction() {
     const [amount, setAmount] = useState(null);
     const {register, handleSubmit, errors}= useForm()
     const {handleClickAdd, clickAdd, addTransaction} =useContext(TransactionContext)
-    const [expenseType, setExpenseType]= useState('food')
+    const [expenseType, setExpenseType]= useState(null)
     const [transactionType, setTransactionType]= useState("income")
     const [expense, setExpense]= useState(false)
     const [selectedDate, setSelectedDate]= useState(null)

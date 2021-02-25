@@ -2,7 +2,7 @@
     background-color: #fff;
     height: 280px;
     margin-top: 70px;
-    width: 800px;
+    max-width: 800px;
     display: grid;
     grid-template-columns: 50% 50%;
 
@@ -17,4 +17,13 @@
     height: 100%;
     width: 100%;
     padding: 0;
+}
+
+
+
+@media screen and (max-width: 880px){
+    .charts-section{
+        width: 750px;
+    }
+    
 }

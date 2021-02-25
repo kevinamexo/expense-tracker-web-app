@@ -44,7 +44,7 @@ const Transaction = ({transac}) => {
                 {transac.type == 'entertainment'&& <RiMovie2Line  className="t-icon"/>}
                 {transac.type == 'bills' && <BiReceipt  className="t-icon"/>}
                 {transac.transactionType=='income'&&<GrMoney  className="t-icon"/> }
-                <p className="date">{`${transac.date.getDate()}-${transac.date.getMonth() + 1}-${transac.date.getFullYear()}`}</p>
+                
   
                 
             </div>
@@ -59,7 +59,8 @@ const Transaction = ({transac}) => {
                 <div className="edit-transaction">
                     <li onClick={()=>deleteTransaction(transac.id)}><a>Delete</a></li>
                 </div> 
-            </div>  
+            </div> 
+            <p className="date">{`${transac.date.getDate()}-${transac.date.getMonth() + 1}-${transac.date.getFullYear()}`}</p> 
         </div>
     )
 }

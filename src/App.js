@@ -5,11 +5,13 @@ import {TransacProvider} from './Context/TransactionContext'
 import AddTransaction from './components/History/Transaction/AddTransaction/AddTransaction'
 import Summary from './components/Summary/Summary'
 import ChartSection from './components/Charts/ChartSection'
+import LandingPage from './components/LandingPage/LandingPage';
 function App() {
   return (
     <TransacProvider>
       <div className="App">
         <Navbar/>
+        <LandingPage/>
         <div className="main-section-container">
           <div className="main-history-section">
             <History/>

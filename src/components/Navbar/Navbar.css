@@ -5,6 +5,10 @@
     justify-content: space-between;
     height: 80px;
     box-shadow: 0 0 2px 1px rgb(201, 200, 200);
+
+}
+a{
+    cursor: pointer;
 }
 
 .logo-section,
@@ -17,6 +21,7 @@
 .open-menu-btn{
     /* background-color: aqua; */
     cursor: pointer;
+    z-index: 100;
 }
 .logo{
     font-size: 1.7em;
@@ -30,13 +35,47 @@
     font-size: 1.3em;
     font-style: italic
 }
+.nav-items{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
 
+}
+.nav-item,
+.nav-item a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav-item a{
+    color: rgb(7, 92, 148);
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 2.5px 7px;
+    border-radius: 20px;
+}
+
+.nav-items a:hover,
+.nav-item-home
+.nav-item a:hover{
+    color:#fff;
+    background-color: rgb(7, 92, 148);
+   
+    transition: all 0.2s ease-in;
+}
 .user-icon{
     margin-right: 10px;
+    cursor: pointer;
 }
 .nav-sign-in{
     margin-right: 40px;
-    font-size: 1.2e,;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 .user-icon{
     font-size: 1.8em;
