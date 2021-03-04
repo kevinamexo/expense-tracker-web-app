@@ -19,11 +19,12 @@ function Navbar() {
             <div className="user-section">
                 <FaRegUserCircle className="user-icon"/>
                 <p className="nav-sign-in"> Log in</p>
-                <FaBars className="open-menu-btn" onClick={()=>setOpenSidebar(!openSidebar)}/>
+                <FaBars className={openSidebar? 'open-menu-btn white':'open-menu-btn'} onClick={()=>setOpenSidebar(!openSidebar)}/>
             </div>
-            <div className= {openSidebar?"sidebar":"hidden"}>
-                <Sidebar/>
+            <div className={openSidebar?"sidebar":"sidebar-hidden"}>
+                <Sidebar/>  
             </div>
+            
         </div>
     )
 }

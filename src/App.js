@@ -6,12 +6,19 @@ import AddTransaction from './components/History/Transaction/AddTransaction/AddT
 import Summary from './components/Summary/Summary'
 import ChartSection from './components/Charts/ChartSection'
 import LandingPage from './components/LandingPage/LandingPage';
+import Sidebar from './components/Sidebar/Sidebar';
+import PricingSection from './components/Pricing/PricingSection';
+import ContactForm from './components/ContactForm/ContactForm';
+
 function App() {
   return (
     <TransacProvider>
       <div className="App">
-        <Navbar/>
+        {/* <Sidebar/> */}
+        <Navbar/>     
         <LandingPage/>
+        {/* <PricingSection/> */}
+        <ContactForm/>
         <div className="main-section-container">
           <div className="main-history-section">
             <History/>
@@ -20,10 +27,7 @@ function App() {
           <div className ="summary">
             <Summary/>
           </div>
-        {/* <LandingPage/> */}
-          
-         
-        </div>
+        </div> 
 
         
       

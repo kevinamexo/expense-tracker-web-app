@@ -30,8 +30,9 @@ function AddTransaction() {
             console.log('trued')
         } else if (e.target.value=='income'){
             setTransactionType('income')
-            setExpense(false)
             setExpenseType(null)
+            setExpense(false)
+           
         }
 }  
 
