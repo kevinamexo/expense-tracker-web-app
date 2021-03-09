@@ -1,4 +1,4 @@
-import React,{useState, useEffect, useContext}from 'react'
+import React,{useState, useEffect, useContext} from 'react'
 import {FaBars, FaClose,FaMoneyBillWave, FaRegUserCircle} from 'react-icons/fa'
 import Sidebar from '../Sidebar/Sidebar'
 import './Navbar.css'
@@ -19,7 +19,8 @@ function Navbar() {
             <div className="user-section">
                 <FaRegUserCircle className="user-icon"/>
                 <p className="nav-sign-in"> Log in</p>
-                <FaBars className={openSidebar? 'open-menu-btn white':'open-menu-btn'} onClick={()=>setOpenSidebar(!openSidebar)}/>
+                
+                <FaBars className={openSidebar? 'hidden':'open-menu-btn'} onClick={()=>setOpenSidebar(!openSidebar)}/>
             </div>
             <div className={openSidebar?"sidebar":"sidebar-hidden"}>
                 <Sidebar/>  

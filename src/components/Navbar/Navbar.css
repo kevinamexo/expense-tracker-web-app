@@ -26,10 +26,17 @@ a{
     cursor: pointer;
     z-index: 100;
 }
-.open-menu-btn{
-    position: fixed;
+.open-menu-btn,
+.close-menu-btn{
+    position: absolute;
     right: 50px;
 }
+.close-menu-btn{
+    z-index: 10;
+    color:white;
+    font-size: 2em;
+}
+
 
 .logo{
     font-size: 1.7em;
@@ -115,3 +122,6 @@ a{
     right: -300px;
 }
 
+.hidden{
+    display: hidden;
+}

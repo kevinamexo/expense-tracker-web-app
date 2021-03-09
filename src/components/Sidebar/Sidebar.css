@@ -58,3 +58,14 @@
     color: gold;
     
 }
+
+.close-sidebar{
+    position: relative;
+    right: 48px;
+    top:32px;
+    color:#fff;
+    font-size: 1.5em;
+    z-index: 6;
+    cursor: pointer;
+    font-weight: 900;
+}
