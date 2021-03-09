@@ -6,9 +6,9 @@ function LandingPage() {
             <div className="descr-section">
                 <p className="heading">EXPENSE TRACKER</p>
                 <p className="heading2">Track your expenses with ease. Save money and make plans, track statistics and much more.</p>
-                <p className="heading3">It's Easy,and Free! Click the button below to Sign up Now</p>
+                <p className="heading3">It's Easy,and Free! Click the button below to Sign up Now!!</p>
                 <div className="home-page-btns">
-                    <button className="sign-up-home">Sign Up</button>
+                    <button className="sign-up-home">Sign Up </button>
                     <button className="contact-home">Contact Us</button>
                 </div>
             </div>

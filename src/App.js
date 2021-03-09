@@ -24,7 +24,7 @@ function App() {
             <History/>
             <AddTransaction/>
           </div>   
-          <div className ="summary">
+          <div className="summary">
             <Summary/>
           </div>
         </div> 

@@ -16,22 +16,22 @@ function ContactForm() {
                 <div className="contact-form-container">
                     <h1>Contact Us</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-                        <input name="name" defaultValue="Your Full Name" ref={register}/>
+                        <input name="name" placeholder="Your Full Name" ref={register}/>
 
-                        <input name="email" defaultValue="Your Email Address" ref={register({required:true, 
+                        <input name="email" placeholder="Your Email Address" ref={register({required:true, 
                             maxLength: 100, 
                             pattern:{
                                 value:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                 message:"invalid email address"
                             }})}/>
-                        <div className="form-group">
-                            <textarea name="message" ref={register({required:true})} rows="5" 
-                                placeholder="Your Message...">
+                
+                        <textarea name="message" ref={register({required:true})} rows="5" 
+                            placeholder="Your Message...">
 
-                                </textarea>
-                        </div>
+                        </textarea>
+                       
 
-                        <input className="contact-submit-btn" type="submit"/>
+                        <button className="contact-submit-btn" type="submit">Submit</button>
                             {errors.email&& errors.email.message}
                     </form>
                 </div>

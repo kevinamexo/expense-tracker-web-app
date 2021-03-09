@@ -1,5 +1,5 @@
 .contact-form-section{
-    height: 50vh;
+    height: 60vh;
     display: grid;
     grid-template-columns: 40% 60%;
    
@@ -9,6 +9,11 @@
 .contact-form{
     display: flex;
     flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgb(223, 223, 223);
+    padding:25px 10px;
+    border-radius: 10px;
 }
 
 .contact-image{
@@ -18,7 +23,7 @@
 
 .contact-form-container{
     padding: 20px 50px;
-    background-color: rgb(118, 118, 118);
+    background-color: rgb(2, 172, 107);
 }
 .contact-form-container h1{
     text-align: center;
@@ -26,12 +31,13 @@
 
 }
 textarea,
-input{
-    width:600px;
+input,
+.form-group{
+    width:90%;
     border-radius: 0;
     outline: none;
     border:none;
-    margin-top: 10px;
+    margin: 10px auto;
     font-size: 1.2em;
 }
 input{
@@ -41,4 +47,21 @@ input{
 .contact-image img{
     width: 120%;
     margin-left: -70px;
+}
+
+.contact-submit-btn{
+    background-color: rgb(1, 42, 85);
+    width: 300px;
+    color:#fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 20px;
+    margin: 30px auto;
+    cursor: pointer;
+}
+.contact-submit-btn:hover{
+    background-color: rgb(1, 60, 123);
+}
+.message{
+    width: 100%;
 }
