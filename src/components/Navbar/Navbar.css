@@ -31,11 +31,7 @@ a{
     position: absolute;
     right: 50px;
 }
-.close-menu-btn{
-    z-index: 10;
-    color:white;
-    font-size: 2em;
-}
+.close-menu-btn
 
 
 .logo{

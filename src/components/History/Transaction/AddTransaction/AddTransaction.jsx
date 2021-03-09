@@ -22,6 +22,8 @@ function AddTransaction() {
 
     }
 
+    
+
     const changeSelectOptionHandler =(e)=>{
         if (e.target.value=='expense'){
             setExpense(true)
@@ -36,6 +38,10 @@ function AddTransaction() {
         }
 }  
 
+    const handleExpenseType=(e)=>{
+        setExpenseType(e.target.value)
+
+    }
     const handleFormSubmit =(e)=>{
         
         e.preventDefault()
@@ -53,7 +59,7 @@ function AddTransaction() {
         addTransaction(newTransaction)
         setAmount(0)
         setText('')
-        setExpenseType('food')
+        // setExpenseType(null)
     }
     return (
         <div className="add-transaction">
@@ -73,9 +79,9 @@ function AddTransaction() {
                     {expense&&
                         
                         <select className="transaction-type" onChange={(e)=>{
-                            const selectedType= e.target.value
-                            setExpenseType(selectedType)
-                            console.log(selectedType)
+                            // const selectedType= e.target.value
+                            handleExpenseType(e)
+                            // console.log(selectedType)
                         }}>
                             <option value="food">Food & Drinks</option>
                             <option value="entertainment">Entertainment</option>
